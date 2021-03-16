@@ -1,0 +1,5 @@
+cd C:\Users\Mafia\Desktop\andr apk decm\dex2jar-0.0.9.15
+dex2jar classes.dex
+
+d2j-dex2jar.bat classes.dex
+d2j-dex2jar.bat classes2.dex
