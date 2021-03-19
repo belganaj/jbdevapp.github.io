@@ -93,14 +93,34 @@ text-align: center;
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	
-	 
+	<script>
+	(function($) {
+		$(function() {
+			$.get("sc.php", {
+				req: "http://koraextra.com/mobile#tomorrow"
+			}, function(a) {
+				if ("content" === a.slice(0, 7)) {
+					$("#result").html($($.parseHTML(a.slice(9))).find(".tab-pane"));
+				} else {
+					$("#result").html(a);
+				}
+			})
+		})
+	})(jQuery);
+	</script>
+<script>
+    function replaceURL(matsh_live) {
+        window.location.replace('liverpool' + matsh_live.value);
+    }
+</script>
 <div class="alert">  
 <p>  ملاحظة : موعد المباريات بتوقيت القاهرة GMT+2 </p>
  </div>
 	<div id="result">
 	
-	dvdfdfsdfsdfs
+	
 	</div>
 
+	<p>  ملاحظة : موعد المباريات بتوقيت القاهرة GMT+2 </p>
 </body>
 </html>
